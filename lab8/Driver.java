@@ -2,6 +2,8 @@ public class Driver {
     public static void main(String args[]) {
         ThreeDShape threeDShape;
         Shape shape;
+
+        Triangle triangle = new Triangle("Triangle One", "Blue", 5, 6);
         Circle circle = new Circle("Circle One", "Red", 10.0);
         Rectangle rectangle = new Rectangle("Rectangle One", "Yellow", 15.0, 20.0);
         Cylinder cylinder = new Cylinder("Cylinder One", "Green", 6, 8);
@@ -38,6 +40,10 @@ public class Driver {
         shape = sphere;
         System.out.println("\n---Using shape superclass reference for a sphere " + shape.toString());
         System.out.println("Sphere area = " + shape.area()); // polymorphic call using superclass reference
+
+        shape = triangle;
+        System.out.println("\n---Using shape superclass reference for a triangle " + shape.toString());
+        System.out.println("Triangle area = " + shape.area()); // polymorphic call using superclass reference
 
         threeDShape = sphere;
         System.out.println("\n---Using threeDShape superclass reference for a sphere " + threeDShape.toString());
